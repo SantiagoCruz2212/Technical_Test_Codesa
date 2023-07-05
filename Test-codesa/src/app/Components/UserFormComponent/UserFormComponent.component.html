@@ -1,0 +1,28 @@
+<h2>Agregar usuario</h2>
+<form (ngSubmit)="addUser()">
+
+  <label>
+    <span>Nombre:</span>
+    <span>Dirección:</span>
+  </label>
+<label>
+  <input placeholder="Digite nombre" [(ngModel)]="newUser.nombre" name="nombre" required>
+  <input placeholder="Digite dirección" [(ngModel)]="newUser.direccion" name="direccion">
+</label>
+<label>
+  <span>Email:</span>
+  <span>Teléfono:</span>
+</label>
+<label>
+  <input placeholder="Digite Email" [(ngModel)]="newUser.email" name="email" required>
+  <input placeholder="Digite numero de teléfono" [(ngModel)]="newUser.telefono" name="telefono">
+</label>
+
+
+
+
+  <div class="container-buttons">
+    <button class="cancel" type="button" (click)="closeForm()">Cancelar</button>
+    <button class="add" type="submit">Agregar</button>
+  </div>
+</form>

@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>PANEL DE CONTROL</h1>
+  <section class="container-buttons">
+      <button *ngIf="isRenderButton" (click)="renderForm()">Agregar usuario</button>
+  </section>
+  <app-UserFormComponent class="container-form" *ngIf="isRenderForm" (CloseForm)="renderForm()"></app-UserFormComponent>
+  <app-UserListComponent class="container-table"></app-UserListComponent>
+</div>

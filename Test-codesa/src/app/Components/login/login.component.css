@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  width: 300px;
+}
+
+input{
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button{
+    margin-top: 10px;
+    height: 42px;
+    width: 130px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+}

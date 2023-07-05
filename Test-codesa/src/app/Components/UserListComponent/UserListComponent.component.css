@@ -1,0 +1,22 @@
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  @media screen and (max-width: 600px) {
+    th, td {
+      padding: 6px;
+    }
+    th:nth-child(2), td:nth-child(2) {
+      display: none;
+    }
+  }
+  
