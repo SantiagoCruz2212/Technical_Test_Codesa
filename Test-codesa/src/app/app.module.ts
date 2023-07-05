@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './Components/Home/Home.component'; 
 import { LoginComponent } from './Components/login/login.component'; 
 import { UserListComponentComponent } from './Components/UserListComponent/UserListComponent.component';
 import { UserFormComponentComponent } from './Components/UserFormComponent/UserFormComponent.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { UserFormComponentComponent } from './Components/UserFormComponent/UserF
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

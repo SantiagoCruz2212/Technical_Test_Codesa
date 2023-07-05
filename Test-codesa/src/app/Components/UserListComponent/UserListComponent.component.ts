@@ -1,7 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { User } from 'src/app/models/User.model';
-import { ServicesService } from 'src/app/Services/services.service';
-
+import { ServicesService } from 'src/app/Services/services.service'; 
 @Component({
   selector: 'app-UserListComponent',
   templateUrl: './UserListComponent.component.html',
@@ -13,14 +12,14 @@ export class UserListComponentComponent implements OnInit {
   users: User[] = [];
 
   
-  constructor(private Services: ServicesService) { }
+  constructor(private Service: ServicesService) { }
   
   ngOnInit() {
-    // this.getUsers();
+    this.getUsers();
   }
 
   getUsers(){
-    this.Services.getUsers().subscribe(
+    this.Service.getUsers().subscribe(
       (response) => {
         this.users = response;
       },
@@ -31,7 +30,7 @@ export class UserListComponentComponent implements OnInit {
   }
 
   deleteUser(id : number) {
-    this.Services.deleteUser(id).subscribe(
+    this.Service.deleteUser(id).subscribe(
       (response) => {
         console.log('Usuario eliminado exitosamente');
       },
@@ -43,7 +42,7 @@ export class UserListComponentComponent implements OnInit {
 
   
   updateUser(user : User){
-    this.Services.putUser(user).subscribe(
+    this.Service.putUser(user).subscribe(
       updatedUser => {
         console.log('Usuario actualizado:', updatedUser);
       },

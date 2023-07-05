@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from 'src/app/models/User.model';
-import { ServicesService } from 'src/app/Services/services.service';
+import { ServicesService } from 'src/app/Services/services.service'; 
 
 @Component({
   selector: 'app-UserFormComponent',
@@ -17,7 +17,7 @@ export class UserFormComponentComponent implements OnInit {
     direccion: ''
   };
 
-  constructor(private Services: ServicesService) { }
+  constructor(private Service: ServicesService) { }
   
   @Output() usuarioAgregado = new EventEmitter<User>();
   @Output() CloseForm = new EventEmitter();
@@ -27,7 +27,7 @@ export class UserFormComponentComponent implements OnInit {
 
   addUser() {
     if (this.newUser.nombre && this.newUser.email) {
-      this.Services.postUser(this.newUser)
+      this.Service.postUser(this.newUser)
       this.cleanForm();
       this.CloseForm.emit();
     }
