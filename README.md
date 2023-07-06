@@ -1,4 +1,4 @@
-#IMPORTANT (Usuario: DevSantiago Password: DevSantiago*123)
+##IMPORTANT (Usuario: DevSantiago Password: DevSantiago*123)
 
 ## Technical_Test_Codesa
 Prueba tecnica para desarrollador Frontend en Angular
